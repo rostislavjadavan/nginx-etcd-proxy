@@ -1,0 +1,8 @@
+proxy:
+    image: nginx
+    volumes:
+     - ./templates:/etc/nginx/templates
+    ports:
+     - "2377:2377"
+    environment:
+     - ETCD_HOST=${ETCD_HOST}

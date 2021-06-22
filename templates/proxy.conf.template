@@ -1,0 +1,8 @@
+server {
+    listen       2377;
+    server_name  localhost;
+    
+    location / {
+        proxy_pass   ${ETCD_HOST}:2377;
+    }    
+}
